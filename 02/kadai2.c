@@ -1,11 +1,11 @@
 #include <stdio.h>
 int main(int argc, char const *argv[]) {
-  double k,r,x;
+  double x,r,k;
   int t;
   FILE *fp;
   t=0;
   k=100.0;
-  r=3.0;
+  r=1.0;
   x=1.0;
 
   fp=fopen("output.dat","a");
