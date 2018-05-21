@@ -10,7 +10,7 @@ int main(){
   x=0;
   sum=0;
 
-for(j=0;j<10;j++){
+for(j=0;j<6;j++){
   x=0;
   for(i=0;i<100;i++){
     r=rand()%(N-M+1)+M;

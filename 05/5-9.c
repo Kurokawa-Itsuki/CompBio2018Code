@@ -4,20 +4,21 @@
 #define N 50
 #define k 3
 
-int main(){
-  int a[N],aa[N],i,t,r1,r2,r,c,sum=0,tsum=0,count=0;
+int main() {
+  int a[N],aa[N],i,t,r1,r2,r,sum=0,tsum=0,count=0;
   double ave;
   srand(time(NULL));
 
-  for(c=0;c<100;c++){
+
+do {
   for(i=0;i<N;i++){
     if(i<k){
-    a[i]=1;
-  }
+      a[i]=1;
+    }
     else{
-    a[i]=0;
+      a[i]=0;
+    }
   }
-}
   for(i=0;i<N;i++){
     //printf("%d ",a[i]);
   }
@@ -32,27 +33,27 @@ int main(){
       if(r==0){
         aa[i]=a[r1];
       }
-      if(r==1){
+        if(r==1){
         aa[i]=a[r2];
       }
-    }
-    for(i=0;i<N;i++){
-      a[i]=aa[i];
-      //printf("%d ",a[i]);
-    }
-    //printf("\n");
-    for(i=0;i<N;i++){
-    sum=sum+a[i];
-    }
-    if(sum==N){
-      count++;
-      tsum=tsum+(t+1);
-      printf("%d\n",t+1);
-      break;
-    }
-  }
 }
+for(i=0;i<N;i++){
+a[i]=aa[i];
+//printf("%d ",a[i]);
+}
+//printf("\n");
+for(i=0;i<N;i++){
+sum=sum+a[i];
+}
+if(sum==N){
+count++;
+tsum=tsum+(t+1);
+printf("%d\n",t+1);
+break;
+}
+}
+}while(count<100);
 ave=(double)tsum/(double)count;
 printf("%d %d %.3f\n",count,tsum,ave);
-  return 0;
+return 0;
 }
